@@ -1,0 +1,30 @@
+modelo Lampada 3 Estados // Representa uma lâmpada em uso com 3 estados
+início do Modelo
+    dado nivelDaLampada; // Indica o estado e nível de brilho da lâmpada
+	
+    operação liga() // liga a lampada
+	    início
+			nivelDaLampada = ligada;
+        fim
+
+    operação brilho() // reduz o brilho da lampada em 50% ou inicia a lampada com brilho em 50%
+        início
+            nivelDaLampada = metade;
+        fim
+
+    operação adesliga()  // desliga a lampada
+        início
+            nivelDaLampada = desligada;
+        fim
+
+    operação mostraNivel
+        início
+            se (nivelDaLampada == ligada)
+                imprime "A lâmpada está ligada";
+            se (nivelDaLampada == brilho)
+                imprime "A lâmpada está com 50% de seu brilho total";
+            senão
+                imprime "A lâmpada está apagada";
+        fim
+
+fim do modelo

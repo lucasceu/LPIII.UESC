@@ -1,0 +1,66 @@
+Modelo dataAprimorado
+início do modelo
+    dado dia, mês, ano; // Componentes da data
+
+    operação inicializaData(umDia, umMês, umAno) // Argumentos para a operação
+        início
+            Se dataÉValida(umDia, umMês, umAno) // Repassa os argumentos para a operação
+                início
+                    dia = umDia;
+                    mês - umMês;
+                    ano = umAno;
+                fim
+            senão // Se a data não for válida
+                início
+                    dia = 0;
+                    mêa = 0;
+                    ano = 0;
+                fim
+        fim
+
+    operação dataÉValida(umDia, umMês, umAno) // Argumentos para a operação
+        início
+            se((dia>=1) e (dia<=31) e (mês >=1) e (mês <=12))
+                retorna verdadeiro;
+            senão
+                retorna falso;
+        fim
+
+    operação mostraData() // Mostra data imprimindo os valores de seus dados
+        início
+            imprime dia;
+            imprime "/";
+            imprime mês;
+            imprime "/";
+            imprime ano;
+        fim
+
+    operação diaDaSemana() // Utiliza biblioteca específica para identificar o dia da semana da data passada
+        início
+            importa função datetime da biblioteca datetime
+            dia = inicializaData();
+            retorna dia.weekday();
+        fim
+    
+    operação mostraDia() // Retorna o dia da semana de acordo com o retorno da função weekday
+        início
+            se dia.weekday() == 1
+                retorna Segunda-Feira
+            se dia.weekday() == 2
+                retorna Terça-Feira
+            se dia.weekday() == 3
+                retorna Quarta-Feira            
+            se dia.weekday() == 4
+                retorna TQuinta-Feira
+            se dia.weekday() == 5
+                retorna Sexta-Feira
+            se dia.weekday() == 6
+                retorna Sábado
+            se dia.weekday() == 2
+                retorna Domingo
+        fim
+        
+fim do modelo
+
+
+    

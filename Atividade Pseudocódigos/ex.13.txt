@@ -1,0 +1,27 @@
+Modelo Ponto2D
+início do modelo
+ dado coordenadaX, coordenadaY; //Indica as coordenadas X e Y
+
+    operação lêPonto1() // Indica o ponto resultante das coordenadas X e Y
+        início
+            lê coordenadaX;
+            lê coordenadaY;
+         fim
+
+    operação lêPonto2() // Indica o ponto resultante das coordenadas X e Y
+        início
+            lê coordenadaX;
+            lê coordenadaY;
+        fim
+
+    operação calculaPontos(Ponto1, Ponto2) // Calcula os pontos 1 e 2 a partir das 4 coordenadas lidas anteriormente
+        início
+            calcula Ponto1 e Ponto2;
+        fim
+
+    operação imprimeLinha(calculaPontos) // Imprime a linha calculada
+        início
+            imprime linha;
+        fim
+
+fim do modelo
