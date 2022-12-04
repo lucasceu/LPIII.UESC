@@ -9,6 +9,5 @@ public class MainDH {
         DataHora dh1 = new DataHora(d1, h1);
 
         System.out.println(dh1.toString());
-        //dh1.isEqual(dh2);
     }
 }
