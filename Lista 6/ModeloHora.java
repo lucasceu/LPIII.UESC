@@ -33,25 +33,6 @@ public class ModeloHora {
         }
     }
 
-    // private boolean verificaHora (int seg, int min) {
-    //     if (seg < 0 || seg >= 60 || min < 0 || min >= 60) {
-    //         System.out.println("Hora inválida");
-    //         return false;
-    //     }
-    //     else {
-    //         return true;
-    //     }
-    // }
-
-    // private boolean verificaHora (int seg) {
-    //     if (seg < 0 || seg >= 60) {
-    //         System.out.println("Hora inválida");
-    //         return false;
-    //     }
-    //     else {
-    //         return true;
-    //     }
-    // }
 
     public String showData () {
         return String.format("%02d", hora) + ":" + String.format("%02d", min) + ":" + String.format("%02d", seg);
