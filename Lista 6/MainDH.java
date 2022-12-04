@@ -12,5 +12,3 @@ public class MainDH {
         //dh1.isEqual(dh2);
     }
 }
-
-//pegar atributos privados das classes base? como?
