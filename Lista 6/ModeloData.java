@@ -30,7 +30,6 @@ public class ModeloData {
     
 
     public boolean verificaData(int dia, int mes, int ano) {
-        //Evitar ter essa verificação dentro de cada case
         if (dia < 1) {
             System.out.println("Data invalida");
             dia = 0;
@@ -49,7 +48,6 @@ public class ModeloData {
                         return false;
                     }
                     break;
-                    //Coloquei a verificação de ano bissexto apenas para case 2 para poupar verificação
                 case 2:
                     if ( ano%400 == 0 || ano%4 == 0 && ano%100 != 0 ) {
                         if (this.dia > 29) {
@@ -90,8 +88,6 @@ public class ModeloData {
     public String showData() {
         return String.format("%02d", dia) + "/" + String.format("%02d", mes) + "/" + String.format("%02d", ano);
     }
-//Calculos feitos utilizando o algoritmo de Zeller (1882), disponível em:
-// https://www.criarfazer.net/como-calcular-o-dia-da-semana-de-qualquer-ano/
     public void getDiaSemana(int dia, int mes, int ano) {
         if (this.mes < 3) {
             this.mes = this.mes + 12;
@@ -113,7 +109,6 @@ public class ModeloData {
             case 6 -> System.out.println("Sexta");
             default -> System.out.println("Falha");
         }
-        //O IntelliJ sugeriu esse "switch enchanced", pode comentar se acha a legibilidade do código  melhor assim?
     }
 
     public static void showMes(int mes) {
